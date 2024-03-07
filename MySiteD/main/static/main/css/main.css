@@ -1,3 +1,7 @@
 body {
-    background:green;
+    background:#171a42;
+}
+aside {
+    float:left;
+    background: #381342;
 }

@@ -13,13 +13,14 @@
 
 <body>
     <aside>
-        <snap class="logo"">MySate</snap>
+        <img src="{% static 'main/img/sova.png'%}" alt="Лого">
+        <snap class="logo"">Сайт на Django</snap>
         <h3>Навигация</h3>
         <ul>
-            <a href=""><li><i class=" fa-solid fa-house"></i></i>Главная</li></a>
-            <a href=""><li><i class="fa-solid fa-book-heart"></i></i>Статьи о криптовалюте</li></a>
-            <a href=""><li><i class="fa-solid fa-address-card"></i></i>Ссылки на git</li></a>
-            </ul>
+            <a href="{% url 'home'%}"><li><i class=" fa-solid fa-house"></i>Главная</li></a>
+            <a href=""><li><i class="fa-solid fa-address-card"></i>Ссылки на git</li></a>
+            <a href="{% url 'cript'%}"><li><i class="fa-regular fa-folder"></i>Немного о криптовалюте</li></a>
+        </ul>
     </aside>
     <main>
         {%block content %}{%endblock%}

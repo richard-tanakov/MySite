@@ -1,19 +1,22 @@
 body {
-    background:#2c2c2c;
+    background: #2c2c2c;
 }
+
 aside {
-    float:left;
-    background: #381342;
-    width : 15%;
-    padding : 2.5;
+    float: left;
+    background: #1a081f;
+    width: 15%;
+    padding: 2.5;
     height: 100vh;
     color: #fff;
-    border-right: 5px solid #4d4d4d;    
+    border-right: 5px solid #4d4d4d;
 }
+
 aside img {
     width: 80px;
-    float: left ;
+    float: left;
 }
+
 aside .logo {
     font-size: 25px;
     margin-left: 10px;
@@ -27,7 +30,9 @@ aside h3 {
     font-size: 15px;
 }
 
-aside ul {list-style: none;}
+aside ul {
+    list-style: none;
+}
 
 aside ul li {
     color: #fff;
@@ -37,11 +42,12 @@ aside ul li {
     transition: transform .6s ease;
 }
 
-aside ul li:hover, aside ul a:hover {
-    color:aqua;
+aside ul li:hover,
+aside ul a:hover {
+    color: aqua;
     text-decoration: none;
     transform: scale(1.05);
-} 
+}
 
 main .features {
     float: left;
@@ -50,3 +56,30 @@ main .features {
     text-align: center;
     width: 75%;
 }
+
+main .features h1 {
+    font-size: 40px;
+}
+
+main .features p {
+    max-width: 400px;
+    margin: 20px auto;
+}
+
+
+
+main .uni h1 {
+    font-size: 30px;
+    color: #42b9c2;
+    text-align: center;
+    width: 85%;;
+}
+
+main .uni p {
+    float: left;
+    font-size: 18px;
+    color: #56bfc7;
+    text-align: center;
+    width: 75%;
+}
+

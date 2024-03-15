@@ -5,7 +5,7 @@ def index(request):
     
     return render(request,'main/index.html',{'title': "Главная страница"})
 
-def cript (request):
-    return render(request,'main/cont_cript.html')
+def git (request):
+    return render(request,'main/github.html',{'title':"Ссылки на github репозитории"})
 
 

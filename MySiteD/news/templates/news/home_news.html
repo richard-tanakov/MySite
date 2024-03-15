@@ -3,22 +3,27 @@
 Краткие Статьи
 {%endblock%}
 
+
 {%block content %}
-<div class="features">
-    <h1> Выжимка из статей.</h1><br>
-    {% if news%}
-    {%for el in news%}
-    <div class="alert alert-warning">
-        <h3>{{el.title}}</h3> <br>
-        <p>{{el.anons}}</p><br>
-        <a href="{% url 'news-detail' el.id%}" class="btn btn-warning">Читать полностью</a>
+<div class="container">
+    <div class="mx-auto" style="width: 600px; background-color: #2c2c2c"
+    
+            {% if news%}
+            {%for el in news%}
+            <div class="mx-auto" style="width: 600px; background-color: #2c2c2c;">
+                <h3 class="text-success">{{el.title}}</h3><br>
+                <p class="text-success">{{el.anons}}</p><br>
+                
+            
+                <a href="{% url 'news-detail' el.id%}" class="btn btn-warning">Читать полностью</a>
+            </div>
+        
+</div>
+{%endfor%}
 
-    </div>
-    {%endfor%}
-
-    {% else %}
-    <p>Отсуствтуют записи.</p>
-    {%endif%}
+{% else %}
+<p>Отсуствтуют записи.</p>
+{%endif%}
 </div>
 
 {%endblock%}

@@ -6,7 +6,7 @@ from django.conf.urls.static import static
 
 urlpatterns = [
     path('', views.index, name='home'),
-    path('cript', views.cript,name='cript'),
-    path('news/', include ('news.urls')),
+    path('git', views.git,name='git'),
+    path('news/', include ('news.urls'), name='news'),
 
 ]+ static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

@@ -1,18 +1,24 @@
 {%extends 'main/base.html'%}
 {%block title %}
-Home  
+Краткие Статьи
 {%endblock%}
 
 {%block content %}
-    <div class="features">
-        <h1>Новости на сайте.</h1>
-        {%for el in news%}
-                <div class="alert alert-warning">
-                    <h3>{{el.title}}</h3>
-                    <p>{{el.anons}}</p>
-                    
-                </div>
-        {%endfor%}      
+<div class="features">
+    <h1> Выжимка из статей.</h1><br>
+    {% if news%}
+    {%for el in news%}
+    <div class="alert alert-warning">
+        <h3>{{el.title}}</h3> <br>
+        <p>{{el.anons}}</p><br>
+        <a href="{% url 'news-detail' el.id%}" class="btn btn-warning">Читать полностью</a>
+
     </div>
+    {%endfor%}
+
+    {% else %}
+    <p>Отсуствтуют записи.</p>
+    {%endif%}
+</div>
 
 {%endblock%}

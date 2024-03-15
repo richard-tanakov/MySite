@@ -8,19 +8,28 @@
     <title>{%block title%}{%endblock%}</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="{% static 'main/css/main.css'%}">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.5.1/css/all.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.5.0/css/all.css">
 </head>
 
 <body>
     <aside>
         <img src="{% static 'main/img/sova.png'%}" alt="Лого">
-        <snap class="logo"">Сайт на Django</snap>
+        <snap class="logo">Портфолио</snap>
         <h3>Навигация</h3>
         <ul>
-            <a href="{% url 'home'%}"><li><i class=" fa-solid fa-house"></i>Главная</li></a>
-            <a href=""><li><i class="fa-solid fa-address-card"></i>Ссылки на git</li></a>
-            <a href="{% url 'cript'%}"><li><i class="fa-regular fa-folder"></i>Немного о криптовалюте</li></a>
-            <a href="{% url 'new_home'%}"><li><i class=" fa-solid fa-house"></i>Новости сайта</li></a>
+            <a href=" {% url 'home' %}">
+                <li><i class=" fa-solid fa-house"></i>Главная</li>
+            </a>
+            <a href="{% url 'cript'%}">
+                <li><i class="fa-solid fa-id-card"></i>Ссылки на github</li>
+            </a>
+            <a href="{% url 'new_home'%}">
+                <li><i class="fa-solid fa-book-bookmark"></i>Статьи</li>
+            </a>
+            <a href="{% url 'create'%}">
+                <li><button class="button" class="btn btn-default btn-xs"><i class="fa-solid fa-plus"></i>Добавить
+                        запись</button></li> <br>
+            </a>
 
         </ul>
     </aside>

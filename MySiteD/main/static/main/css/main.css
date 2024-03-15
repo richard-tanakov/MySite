@@ -5,7 +5,7 @@ body {
 aside {
     float: left;
     background: #1a081f;
-    width: 15%;
+    width: 13%;
     padding: 2.5;
     height: 100vh;
     color: #fff;
@@ -18,8 +18,8 @@ aside img {
 }
 
 aside .logo {
-    font-size: 25px;
-    margin-left: 10px;
+    font-size: 20px;
+    margin-left: 5px;
     font-weight: bold;
     position: relative;
 
@@ -35,7 +35,7 @@ aside ul {
 }
 
 aside ul li {
-    color: #fff;
+    color: #9edaec;
     display: block;
     margin-top: 20px;
     font-size: 12px;
@@ -51,19 +51,20 @@ aside ul a:hover {
 
 main .features {
     float: left;
-    color: #fff;
+    color: #59ad67;
     margin-top: 100px;
     text-align: center;
     width: 75%;
 }
 
 main .features h1 {
-    font-size: 40px;
+    font-size: 30px;
 }
 
 main .features p {
-    max-width: 400px;
-    margin: 20px auto;
+    max-width: 500px;
+    margin: 30px auto;
+    color: #5e8f66;
 }
 
 
@@ -81,5 +82,11 @@ main .uni p {
     color: #56bfc7;
     text-align: center;
     width: 75%;
+}
+
+form {
+    margin-left: 30%;
+    width: 350px;
+    margin-top: 45px;
 }
 

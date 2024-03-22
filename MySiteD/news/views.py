@@ -23,6 +23,7 @@ class NewsUpdate(UpdateView):
 
 class NewsDelete(DeleteView):
     model = Articles
+    success_url='/news/'
     template_name = 'news/news_delete.html'
 
 

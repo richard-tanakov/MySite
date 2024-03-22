@@ -5,25 +5,26 @@
 
 
 {%block content %}
-<div class="container">
-    <div class="mx-auto" style="width: 600px; background-color: #2c2c2c"
-    
-            {% if news%}
-            {%for el in news%}
-            <div class="mx-auto" style="width: 600px; background-color: #2c2c2c;">
-                <h3 class="text-success">{{el.title}}</h3><br>
-                <p class="text-success">{{el.anons}}</p><br>
-                
-            
-                <a href="{% url 'news-detail' el.id%}" class="btn btn-warning">Читать полностью</a>
-            </div>
-        
-</div>
-{%endfor%}
 
-{% else %}
-<p>Отсуствтуют записи.</p>
-{%endif%}
+<div class="container" >
+    <li class="active"><a href="{% url 'create'%}"><button class="button" class="btn btn-default btn-xs"><i
+        class="fa-solid fa-plus">Добавить запись</button></a></li>     
+        {% if news%}
+            {%for el in news%}
+            <div class="text-center" style="color: #fff;">
+                <h4>{{el.title}}</h4><br>
+                <p>{{el.anons}}</p><br>
+
+
+                    <a href="{% url 'news-detail' el.id%}" type='button' class="btn btn-success">Прочитать статью</a>
+            </div>
+
+
+            {%endfor%}
+
+        {% else %}
+        <p>Отсуствтуют записи.</p>
+        {%endif%}
 </div>
 
 {%endblock%}

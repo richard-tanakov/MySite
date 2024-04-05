@@ -1,0 +1,18 @@
+{%extends 'main/base.html'%}
+{%block title %}
+Погода в вашем городе
+{%endblock%}
+{%block content %}
+<div class="text-center">
+    <li>
+        <input type="text" id="sity" name="sity" class="form-control; text-center" placeholder="Введите город"
+            style="width: 250px; height: 50px;"><img src="http://openweathermap.org/img/w/{{info.icon}}.png" alt=""
+            class="img-thumbnail" style="width: 50px; height: 50px; background-color: rgb(88, 35, 138);">
+    </li>
+    <li><a href="" type='button' class="btn btn-success">Узнать погоду</a></li>
+</div>
+<div class="text-center">
+    <b>Город:</b> {{info.city}}<br>
+    <b>Температура:</b>{{info.temp}}<sup>o</sup><br>
+</div>
+{%endblock%}

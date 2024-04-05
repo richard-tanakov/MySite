@@ -8,5 +8,6 @@ urlpatterns = [
     path('', views.index, name='home'),
     path('git', views.git,name='git'),
     path('news/', include ('news.urls'), name='news'),
+    path('weather_forecast', include('weather_forecast.urls'), name='weather_forecast'),
 
 ]+ static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

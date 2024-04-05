@@ -28,11 +28,13 @@
                 <img height="100" width="100" src="{% static 'main/img/sova.png'%}" alt="Лого">
             </div>
             <div style="-webkit-text-fill-color:    rgb(255, 253, 250)">
-                <ul class="nav navbar-nav" >
+                <ul class="nav navbar-nav">
                     <li><a href="{%url 'home' %}" type='button' class="btn btn-success">Главная страница</a></li>
                     <li><a href="{% url 'git'%}" type='button' class="btn btn-success">Ссылки github</a></li>
                     <li><a href="{% url 'new_home'%}" type='button' class="btn btn-success">Статьи</a></li>
-                    
+                    <li><a href="{% url 'weather_forecast'%}" type='button' class="btn btn-success">Погода в вашем
+                            городе</a></li>
+
 
                 </ul>
             </div>
@@ -47,11 +49,11 @@
     <!-- </aside> -->
     <main>
         <div class="container-fluid">
-            
-            
-                    {%block content %}{%endblock%}
-            
-            
+
+
+            {%block content %}{%endblock%}
+
+
         </div>
     </main>
 

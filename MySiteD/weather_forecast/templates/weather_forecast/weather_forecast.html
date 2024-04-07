@@ -4,15 +4,27 @@
 {%endblock%}
 {%block content %}
 <div class="text-center">
+    <h1 style="color: aqua;">Прогноз погоды</h1><br>
     <li>
+        <h1> </h1>
         <input type="text" id="sity" name="sity" class="form-control; text-center" placeholder="Введите город"
-            style="width: 250px; height: 50px;"><img src="http://openweathermap.org/img/w/{{info.icon}}.png" alt=""
-            class="img-thumbnail" style="width: 50px; height: 50px; background-color: rgb(88, 35, 138);">
+            style="width: 250px; height: 50px;">
     </li>
     <li><a href="" type='button' class="btn btn-success">Узнать погоду</a></li>
 </div>
-<div class="text-center">
-    <b>Город:</b> {{info.city}}<br>
-    <b>Температура:</b>{{info.temp}}<sup>o</sup><br>
-</div>
+
+<table class="table" style="color: antiquewhite;">
+
+        {% for info1 in info%}
+            <tr>
+              <th scope="row"></th>
+              <td>Дата и время:{{info1.data}}</td>
+              <td>{{info1.temp}}℃</td>
+              <td><img src="http://openweathermap.org/img/w/{{info1.icon}}.png" alt=""
+                class="img-thumbnail" style="width: 50px; height: 50px; background-color: rgb(88, 35, 138);"></td>
+            </tr>
+
+        {%endfor%}
+
+</table>
 {%endblock%}

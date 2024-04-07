@@ -8,7 +8,15 @@ Home
     <h1>Главная страница</h1>
     <p>Сайт создан как портфолио.Написан при использовании фройемворка Django.</p>
     <p> На нём содержиться:Краткая выжимка информация из интересных статей и ссылки на них.</p>
-    <p></p>
+
+    <li>
+        <h3>Чтобы узнать прогноз погоды, введите свой город.</h3> 
+        <div style="color: black;">   
+            <input type="text" id="city" name="city" class="form-control; text-center" placeholder="Введите город"
+        </div>
+    </li>
+    <li><a href="weather_forecast" type='button' class="btn btn-success">Узнать погоду</a></li>
+    </form>
 </div>
 
 {%endblock%}

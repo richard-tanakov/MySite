@@ -1,11 +1,17 @@
 from django.shortcuts import render
 import requests
+from .forms import CityForm  
 # Create your views here.
 
 
 def weather_forecast(request):
-    appid = '3fb5d3aebe95b7a20e70449ab17360c2'
     city = "Москва"
+    form = CityForm(request.GET)
+    if form.is_valid():
+        city=form.data["name"]
+
+    appid = '3fb5d3aebe95b7a20e70449ab17360c2'
+    
     url = f"http://api.openweathermap.org/geo/1.0/direct?q={city}&limit=5&appid={appid}"
 
     res = requests.get(url.format(city)).json()
@@ -28,5 +34,5 @@ def weather_forecast(request):
                'icon': res2['list'][0]['weather'][0]["icon"],
                }
         days.append(day)
-    context = {'info': days}
+    context = {'info': days, 'form':form}
     return render(request, "weather_forecast/weather_forecast.html", context)

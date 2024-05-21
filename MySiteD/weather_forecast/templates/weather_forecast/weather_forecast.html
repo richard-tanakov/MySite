@@ -5,26 +5,25 @@
 {%block content %}
 <div class="text-center">
     <h1 style="color: aqua;">Прогноз погоды</h1><br>
-    <li>
-        <h1> </h1>
-        <input type="text" id="sity" name="sity" class="form-control; text-center" placeholder="Введите город"
+    <form method="get" class="post-form">
+        <input type="text" id="name" name="name" class="form-control; text-center" placeholder="Введите город" value="{{name}}"
             style="width: 250px; height: 50px;">
-    </li>
-    <li><a href="" type='button' class="btn btn-success">Узнать погоду</a></li>
+        <input type="submit" class="save btn btn-default" value="Узнать прогноз">
+    </form>
 </div>
 
 <table class="table" style="color: antiquewhite;">
 
-        {% for info1 in info%}
-            <tr>
-              <th scope="row"></th>
-              <td>Дата и время:{{info1.data}}</td>
-              <td>{{info1.temp}}℃</td>
-              <td><img src="http://openweathermap.org/img/w/{{info1.icon}}.png" alt=""
-                class="img-thumbnail" style="width: 50px; height: 50px; background-color: rgb(88, 35, 138);"></td>
-            </tr>
+    {% for info1 in info%}
+    <tr>
+        <th scope="row"></th>
+        <td>Дата и время:{{info1.data}}</td>
+        <td>{{info1.temp}}℃</td>
+        <td><img src="http://openweathermap.org/img/w/{{info1.icon}}.png" alt="" class="img-thumbnail"
+                style="width: 50px; height: 50px; background-color: rgb(88, 35, 138);"></td>
+    </tr>
 
-        {%endfor%}
+    {%endfor%}
 
 </table>
 {%endblock%}
